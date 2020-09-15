@@ -173,10 +173,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC46782125109AAF00335612 /* AppDelegate.swift in Sources */,
-				FCA9C3972511018D009F37AA /* QuestionViewController.swift in Sources */,
 				FC46782325109AAF00335612 /* SceneDelegate.swift in Sources */,
 				FCA9C3542510E856009F37AA /* ViewController.swift in Sources */,
-				FC46782525109AAF00335612 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,20 +196,15 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		FC46783525109AB100335612 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FC46781C25109AAF00335612 /* Quiz-IOS */;
-			targetProxy = FC46783425109AB100335612 /* PBXContainerItemProxy */;
-		};
-		FC46784025109AB100335612 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FC46781C25109AAF00335612 /* Quiz-IOS */;
-			targetProxy = FC46783F25109AB100335612 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
+		FCA9C3552510EF50009F37AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC46782C25109AB100335612 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		FC46782B25109AB100335612 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
