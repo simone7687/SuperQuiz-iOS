@@ -49,6 +49,7 @@
 		FC46783E25109AB100335612 /* Quiz-IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quiz-IOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC46784225109AB100335612 /* Quiz_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz_IOSUITests.swift; sourceTree = "<group>"; };
 		FC46784425109AB100335612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCEE80782510C88300FA97FB /* Quiz-IOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Quiz-IOS.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 		FC46781F25109AAF00335612 /* Quiz-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				FCEE80782510C88300FA97FB /* Quiz-IOS.entitlements */,
 				FC46782025109AAF00335612 /* AppDelegate.swift */,
 				FC46782225109AAF00335612 /* SceneDelegate.swift */,
 				FC46782425109AAF00335612 /* ContentView.swift */,
@@ -434,16 +436,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Quiz-IOS/Quiz-IOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Quiz-IOS/Preview Content\"";
+				DEVELOPMENT_TEAM = L53NN5844X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Quiz-IOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "it.uniupo.Quiz-IOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "uniupo.massaro.Quiz-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -453,16 +458,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Quiz-IOS/Quiz-IOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Quiz-IOS/Preview Content\"";
+				DEVELOPMENT_TEAM = L53NN5844X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Quiz-IOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "it.uniupo.Quiz-IOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "uniupo.massaro.Quiz-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
