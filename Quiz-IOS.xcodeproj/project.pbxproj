@@ -78,41 +78,6 @@
 			path = "Quiz-IOS";
 			sourceTree = "<group>";
 		};
-		FC46782825109AB100335612 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				FC46782925109AB100335612 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		FC46783625109AB100335612 /* Quiz-IOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				FC46783725109AB100335612 /* Quiz_IOSTests.swift */,
-				FC46783925109AB100335612 /* Info.plist */,
-			);
-			path = "Quiz-IOSTests";
-			sourceTree = "<group>";
-		};
-		FC46784125109AB100335612 /* Quiz-IOSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FC46784225109AB100335612 /* Quiz_IOSUITests.swift */,
-				FC46784425109AB100335612 /* Info.plist */,
-			);
-			path = "Quiz-IOSUITests";
-			sourceTree = "<group>";
-		};
-		FCA9C39525110145009F37AA /* Scene */ = {
-			isa = PBXGroup;
-			children = (
-				FCA9C3532510E856009F37AA /* ViewController.swift */,
-				FCA9C3962511018D009F37AA /* QuestionViewController.swift */,
-			);
-			path = Scene;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,42 +97,6 @@
 			productName = "Quiz-IOS";
 			productReference = FC46781D25109AAF00335612 /* Quiz-IOS.app */;
 			productType = "com.apple.product-type.application";
-		};
-		FC46783225109AB100335612 /* Quiz-IOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC46784A25109AB100335612 /* Build configuration list for PBXNativeTarget "Quiz-IOSTests" */;
-			buildPhases = (
-				FC46782F25109AB100335612 /* Sources */,
-				FC46783025109AB100335612 /* Frameworks */,
-				FC46783125109AB100335612 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FC46783525109AB100335612 /* PBXTargetDependency */,
-			);
-			name = "Quiz-IOSTests";
-			productName = "Quiz-IOSTests";
-			productReference = FC46783325109AB100335612 /* Quiz-IOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FC46783D25109AB100335612 /* Quiz-IOSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC46784D25109AB100335612 /* Build configuration list for PBXNativeTarget "Quiz-IOSUITests" */;
-			buildPhases = (
-				FC46783A25109AB100335612 /* Sources */,
-				FC46783B25109AB100335612 /* Frameworks */,
-				FC46783C25109AB100335612 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FC46784025109AB100335612 /* PBXTargetDependency */,
-			);
-			name = "Quiz-IOSUITests";
-			productName = "Quiz-IOSUITests";
-			productReference = FC46783E25109AB100335612 /* Quiz-IOSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
