@@ -15,6 +15,7 @@
 		FC46782D25109AB100335612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC46782B25109AB100335612 /* LaunchScreen.storyboard */; };
 		FC46783825109AB100335612 /* Quiz_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46783725109AB100335612 /* Quiz_IOSTests.swift */; };
 		FC46784325109AB100335612 /* Quiz_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46784225109AB100335612 /* Quiz_IOSUITests.swift */; };
+		FCA9C3542510E856009F37AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9C3532510E856009F37AA /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		FC46783E25109AB100335612 /* Quiz-IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quiz-IOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC46784225109AB100335612 /* Quiz_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz_IOSUITests.swift; sourceTree = "<group>"; };
 		FC46784425109AB100335612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCA9C3532510E856009F37AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FCEE80782510C88300FA97FB /* Quiz-IOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Quiz-IOS.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				FC46782B25109AB100335612 /* LaunchScreen.storyboard */,
 				FC46782E25109AB100335612 /* Info.plist */,
 				FC46782825109AB100335612 /* Preview Content */,
+				FCA9C3532510E856009F37AA /* ViewController.swift */,
 			);
 			path = "Quiz-IOS";
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			files = (
 				FC46782125109AAF00335612 /* AppDelegate.swift in Sources */,
 				FC46782325109AAF00335612 /* SceneDelegate.swift in Sources */,
+				FCA9C3542510E856009F37AA /* ViewController.swift in Sources */,
 				FC46782525109AAF00335612 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
