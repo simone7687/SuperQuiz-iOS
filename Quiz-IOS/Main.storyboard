@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="mac" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,23 +12,23 @@
             <objects>
                 <viewController id="p5W-Uj-AAK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jGd-Pd-9Fc">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIw-Fb-Ac4">
-                                <rect key="frame" x="0.0" y="250" width="800" height="20"/>
+                                <rect key="frame" x="0.0" y="338" width="414" height="20"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezx-kw-PVk">
-                                <rect key="frame" x="0.0" y="280" width="800" height="41"/>
+                                <rect key="frame" x="0.0" y="368" width="414" height="40"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfs-cZ-OTm">
-                                <rect key="frame" x="0.0" y="481" width="800" height="49"/>
+                                <rect key="frame" x="0.0" y="743" width="414" height="49"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                 <state key="normal" title="Start Game"/>
                                 <connections>
@@ -51,44 +51,45 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2rS-FM-DoT"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fGM-Wo-8tO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIU-4b-IG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134.78260869565219" y="91.741071428571431"/>
+            <point key="canvasLocation" x="893.25" y="91"/>
         </scene>
         <!--Quest-->
         <scene sceneID="ROT-Ey-33T">
             <objects>
                 <viewController title="Quest" id="7oU-VX-vDI" customClass="QuestionViewController" customModule="Quiz_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jD5-f9-Wbi">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="560"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMb-hU-ph6">
-                                <rect key="frame" x="0.0" y="100" width="712" height="26.5"/>
+                                <rect key="frame" x="0.0" y="188" width="414" height="26.333333333333343"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="QkP-Hw-Gc1">
-                                <rect key="frame" x="0.0" y="176.5" width="712" height="233.5"/>
+                                <rect key="frame" x="0.0" y="264.33333333333326" width="414" height="481.66666666666674"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrF-bv-8S3">
-                                        <rect key="frame" x="0.0" y="0.0" width="712" height="44.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="292.66666666666669"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3A-YN-dlZ">
-                                        <rect key="frame" x="0.0" y="77.5" width="712" height="30"/>
+                                        <rect key="frame" x="0.0" y="325.66666666666669" width="414" height="30"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfH-GO-ujr">
-                                        <rect key="frame" x="0.0" y="140.5" width="712" height="30"/>
+                                        <rect key="frame" x="0.0" y="388.66666666666669" width="414" height="30"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewd-Vd-dgJ">
-                                        <rect key="frame" x="0.0" y="203.5" width="712" height="30"/>
+                                        <rect key="frame" x="0.0" y="451.66666666666669" width="414" height="30"/>
                                     </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiF-JP-NTE">
-                                <rect key="frame" x="0.0" y="451" width="712" height="39"/>
+                                <rect key="frame" x="0.0" y="754" width="414" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Continue"/>
                             </button>
@@ -114,7 +115,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pc7-zd-OLW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892.75362318840587" y="91.741071428571431"/>
+            <point key="canvasLocation" x="1651.5" y="91"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Sg-1M-e4S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aAA-mR-eMU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U0I-WH-Qqu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="p5W-Uj-AAK" kind="relationship" relationship="rootViewController" id="OeT-1C-2cY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qnp-6c-lyc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.25" y="91"/>
         </scene>
     </scenes>
 </document>
