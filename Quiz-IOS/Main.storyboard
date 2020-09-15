@@ -22,7 +22,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezx-kw-PVk">
-                                <rect key="frame" x="0.0" y="280" width="800" height="40"/>
+                                <rect key="frame" x="0.0" y="280" width="800" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,7 +32,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                 <state key="normal" title="Start Game"/>
                                 <connections>
-                                    <segue destination="7oU-VX-vDI" kind="show" id="O6q-N8-2Cd"/>
+                                    <segue destination="7oU-VX-vDI" kind="show" identifier="flowToQuestionView" id="O6q-N8-2Cd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,31 +64,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="712" height="560"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Question text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMb-hU-ph6">
-                                <rect key="frame" x="0.0" y="208" width="712" height="76"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMb-hU-ph6">
+                                <rect key="frame" x="0.0" y="100" width="712" height="26.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="QkP-Hw-Gc1">
-                                <rect key="frame" x="0.0" y="292" width="712" height="219"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="QkP-Hw-Gc1">
+                                <rect key="frame" x="0.0" y="176.5" width="712" height="233.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrF-bv-8S3">
-                                        <rect key="frame" x="0.0" y="0.0" width="712" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrF-bv-8S3">
+                                        <rect key="frame" x="0.0" y="0.0" width="712" height="44.5"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3A-YN-dlZ">
-                                        <rect key="frame" x="0.0" y="63" width="712" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3A-YN-dlZ">
+                                        <rect key="frame" x="0.0" y="77.5" width="712" height="30"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfH-GO-ujr">
-                                        <rect key="frame" x="0.0" y="126" width="712" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfH-GO-ujr">
+                                        <rect key="frame" x="0.0" y="140.5" width="712" height="30"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewd-Vd-dgJ">
-                                        <rect key="frame" x="0.0" y="189" width="712" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewd-Vd-dgJ">
+                                        <rect key="frame" x="0.0" y="203.5" width="712" height="30"/>
                                     </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiF-JP-NTE">
-                                <rect key="frame" x="0.0" y="441" width="712" height="39"/>
+                                <rect key="frame" x="0.0" y="451" width="712" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Continue"/>
                             </button>
@@ -96,13 +96,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="nyL-tQ-hKP" firstAttribute="trailing" secondItem="TiF-JP-NTE" secondAttribute="trailing" id="6is-nS-Ccc"/>
-                            <constraint firstItem="nyL-tQ-hKP" firstAttribute="bottom" secondItem="TiF-JP-NTE" secondAttribute="bottom" constant="30" id="DDO-Ed-qyW"/>
+                            <constraint firstItem="nyL-tQ-hKP" firstAttribute="bottom" secondItem="TiF-JP-NTE" secondAttribute="bottom" constant="20" id="DDO-Ed-qyW"/>
                             <constraint firstItem="nyL-tQ-hKP" firstAttribute="trailing" secondItem="XMb-hU-ph6" secondAttribute="trailing" id="IPj-nR-uXr"/>
                             <constraint firstItem="QkP-Hw-Gc1" firstAttribute="leading" secondItem="nyL-tQ-hKP" secondAttribute="leading" id="M3f-3g-lRu"/>
                             <constraint firstItem="XMb-hU-ph6" firstAttribute="leading" secondItem="nyL-tQ-hKP" secondAttribute="leading" id="TDY-El-2K4"/>
                             <constraint firstItem="TiF-JP-NTE" firstAttribute="leading" secondItem="nyL-tQ-hKP" secondAttribute="leading" id="cQi-lA-SZS"/>
-                            <constraint firstItem="QkP-Hw-Gc1" firstAttribute="top" secondItem="XMb-hU-ph6" secondAttribute="bottom" constant="70" id="xS5-eE-YUv"/>
-                            <constraint firstItem="nyL-tQ-hKP" firstAttribute="trailing" secondItem="QkP-Hw-Gc1" secondAttribute="trailing" id="yYt-e7-24N"/>
+                            <constraint firstAttribute="bottom" secondItem="QkP-Hw-Gc1" secondAttribute="bottom" constant="150" id="cg3-U0-qgF"/>
+                            <constraint firstItem="XMb-hU-ph6" firstAttribute="top" secondItem="nyL-tQ-hKP" secondAttribute="top" constant="100" id="mZb-lp-hS9"/>
+                            <constraint firstItem="nyL-tQ-hKP" firstAttribute="trailing" secondItem="QkP-Hw-Gc1" secondAttribute="trailing" id="sdV-2S-frX"/>
+                            <constraint firstItem="QkP-Hw-Gc1" firstAttribute="top" secondItem="XMb-hU-ph6" secondAttribute="bottom" constant="50" id="xS5-eE-YUv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nyL-tQ-hKP"/>
                     </view>
