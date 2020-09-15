@@ -16,6 +16,7 @@
 		FC46783825109AB100335612 /* Quiz_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46783725109AB100335612 /* Quiz_IOSTests.swift */; };
 		FC46784325109AB100335612 /* Quiz_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46784225109AB100335612 /* Quiz_IOSUITests.swift */; };
 		FCA9C3542510E856009F37AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA9C3532510E856009F37AA /* ViewController.swift */; };
+		FCA9C3562510EF50009F37AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA9C3552510EF50009F37AA /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FC46784225109AB100335612 /* Quiz_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz_IOSUITests.swift; sourceTree = "<group>"; };
 		FC46784425109AB100335612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCA9C3532510E856009F37AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCA9C3552510EF50009F37AA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FCEE80782510C88300FA97FB /* Quiz-IOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Quiz-IOS.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				FC46782E25109AB100335612 /* Info.plist */,
 				FC46782825109AB100335612 /* Preview Content */,
 				FCA9C3532510E856009F37AA /* ViewController.swift */,
+				FCA9C3552510EF50009F37AA /* Main.storyboard */,
 			);
 			path = "Quiz-IOS";
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				FC46782D25109AB100335612 /* LaunchScreen.storyboard in Resources */,
 				FC46782A25109AB100335612 /* Preview Assets.xcassets in Resources */,
 				FC46782725109AB100335612 /* Assets.xcassets in Resources */,
+				FCA9C3562510EF50009F37AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
