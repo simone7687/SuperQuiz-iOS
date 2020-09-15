@@ -3,7 +3,7 @@
 //  Quiz-IOSUITests
 //
 //  Created by Simone on 14/09/2020.
-//  Copyright © 2020 Simone. All rights reserved.
+//  Copyright © 2020 Simone Massaro. All rights reserved.
 //
 
 import XCTest
