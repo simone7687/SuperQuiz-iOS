@@ -12,6 +12,7 @@
 		FC46782325109AAF00335612 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46782225109AAF00335612 /* SceneDelegate.swift */; };
 		FC46782725109AB100335612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC46782625109AB100335612 /* Assets.xcassets */; };
 		FC46782D25109AB100335612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC46782B25109AB100335612 /* LaunchScreen.storyboard */; };
+		FC5D045E251273C8008EAFE4 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D045D251273C8008EAFE4 /* QuizViewController.swift */; };
 		FCA9C3542510E856009F37AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46782425109AAF00335612 /* ViewController.swift */; };
 		FCA9C3562510EF50009F37AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA9C3552510EF50009F37AA /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		FC46782C25109AB100335612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC46782C95109AB100335612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC46782E25109AB100335612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC5D045D251273C8008EAFE4 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		FCCFC99D25125DE100C50A7C /* Quiz-IOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Quiz-IOS.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 				FC46782B25109AB100335612 /* LaunchScreen.storyboard */,
 				FC46782E25109AB100335612 /* Info.plist */,
 				FC004A4825126A3500E3FCCD /* Quiz.swift */,
+				FC5D045D251273C8008EAFE4 /* QuizViewController.swift */,
 			);
 			path = "Quiz-IOS";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC46782125109AAF00335612 /* AppDelegate.swift in Sources */,
+				FC5D045E251273C8008EAFE4 /* QuizViewController.swift in Sources */,
 				FC46782325109AAF00335612 /* SceneDelegate.swift in Sources */,
 				FC004A4925126A3500E3FCCD /* Quiz.swift in Sources */,
 				FCA9C3542510E856009F37AA /* ViewController.swift in Sources */,
