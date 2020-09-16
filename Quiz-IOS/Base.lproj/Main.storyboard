@@ -30,7 +30,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBE-lF-0SF">
                                 <rect key="frame" x="0.0" y="738" width="414" height="54"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                <state key="normal" title="Start Gam"/>
+                                <state key="normal" title="Start Game"/>
                                 <connections>
                                     <segue destination="kyL-8p-MQ4" kind="show" id="t0f-hK-psc"/>
                                 </connections>
@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Quiz View Controller-->
         <scene sceneID="Wxy-9O-mSD">
             <objects>
-                <viewController id="kyL-8p-MQ4" sceneMemberID="viewController">
+                <viewController id="kyL-8p-MQ4" customClass="QuizViewController" customModule="Quiz_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="msn-iW-Ipg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,6 +109,14 @@
                         <viewLayoutGuide key="safeArea" id="Gkk-Xg-4Q0"/>
                     </view>
                     <navigationItem key="navigationItem" id="652-Zv-f5X"/>
+                    <connections>
+                        <outlet property="answer1" destination="9OG-cR-qvj" id="QWh-zo-NSh"/>
+                        <outlet property="answer2" destination="Nfv-JO-vnz" id="zdG-c2-Cw8"/>
+                        <outlet property="answer3" destination="7ko-Px-NpR" id="S93-Pd-tV2"/>
+                        <outlet property="answer4" destination="Wg0-A1-MkA" id="BgL-07-WVE"/>
+                        <outlet property="continueButton" destination="sGS-Hz-ECB" id="jNP-1R-IXT"/>
+                        <outlet property="questionText" destination="9Sy-MS-nI4" id="OnJ-O4-XYb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nce-rP-KuS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
