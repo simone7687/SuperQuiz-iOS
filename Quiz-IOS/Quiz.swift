@@ -17,13 +17,15 @@ enum QuizType {
 struct Quiz {
     var type : QuizType
     var question : String
-    var answers : [String]
-    var correctAnswers : [Int]
+    var answers : [String]?
+    var correctAnswers : [Int]?
+    var correctAnswerText : String?
     
-    init(type : Quiz, question : String, answers : [String], correctAnswers : [Int]) {
+    init(type : QuizType, question : String, answers : [String]?, correctAnswers : [Int]?, correctAnswerText : String?) {
         self.type = type
         self.question = question
         self.answers = answers
         self.correctAnswers = correctAnswers
+        self.correctAnswerText = correctAnswerText
     }
 }
