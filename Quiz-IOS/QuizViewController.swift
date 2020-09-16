@@ -16,7 +16,33 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var answer4: UIButton!
     @IBOutlet weak var continueButton: UIButton!
 
+    var score : Int = 0
+    var currentAnswers : [Int] = []
+    var currentQuiz : Int = 0
+    var quizzes = [Quiz]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Initialize the quiz
+        createQuiz()
+        // Start Game
+        startGame()
+    }
+
+    /**
+     * Create a set of quizzes
+     */
+    func createQuiz() {
+        // Randomize the questions
+        quizzes.shuffle()
+    }
+
+    /**
+     * Start the game
+     */
+    func startGame() {
+        score = 0
+        currentQuiz = 0
+        showQuiz(quiz: quizzes[currentQuiz])
     }
 }

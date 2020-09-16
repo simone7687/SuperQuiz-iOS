@@ -9,7 +9,7 @@
 import Foundation
 
 enum QuizType {
-    case Normat
+    case Normal
     case Multiple
     case Open
 }
