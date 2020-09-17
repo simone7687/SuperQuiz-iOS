@@ -18,16 +18,16 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var continueButton: UIButton!
 
     @IBAction func answer1Click(_ sender: Any) {
-        clickAnswerButton(answerIndex: 0)
+        clickAnswerButton(answer: 0)
     }
     @IBAction func answer2Click(_ sender: Any) {
-        clickAnswerButton(answerIndex: 1)
+        clickAnswerButton(answer: 1)
     }
     @IBAction func answer3Click(_ sender: Any) {
-        clickAnswerButton(answerIndex: 2)
+        clickAnswerButton(answer: 2)
     }
     @IBAction func answer4Click(_ sender: Any) {
-        clickAnswerButton(answerIndex: 3)
+        clickAnswerButton(answer: 3)
     }
 
     var score : Int = 0
@@ -105,7 +105,22 @@ class QuizViewController: UIViewController {
         }
     }
 
-    func clickAnswerButton(answerIndex : Int?) {
+    func clickAnswerButton(answer : Int?) {
+
+    /**
+     * Check the answer
+     */
+    func checkAnswer(answer : Int?) -> Bool {
+        if (quizzes[currentQuiz].type == QuizType.Normal) {
+            if ((quizzes[currentQuiz].correctAnswers?.contains(answer!)) != nil) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+        return false
+    }
     }
 
     /**
