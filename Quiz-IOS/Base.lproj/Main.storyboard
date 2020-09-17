@@ -74,6 +74,9 @@
                                 <rect key="frame" x="0.0" y="750" width="414" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="continueClick:" destination="kyL-8p-MQ4" eventType="touchUpInside" id="86t-eU-XRR"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="vGU-xg-VMY">
                                 <rect key="frame" x="30" y="264.5" width="354" height="266"/>

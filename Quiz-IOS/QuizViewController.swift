@@ -18,19 +18,54 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var continueButton: UIButton!
 
     @IBAction func answer1Click(_ sender: Any) {
-        clickAnswerButton(selectAnswer: 0)
+        if (quizzes[currentQuiz].type == QuizType.Normal) {
+            clickAnswerButton(selectAnswer: 0)
+        }
+        else if (quizzes[currentQuiz].type == QuizType.Multiple) {
+            pressedButton(button: answer1)
+        }
     }
     @IBAction func answer2Click(_ sender: Any) {
-        clickAnswerButton(selectAnswer: 1)
+        if (quizzes[currentQuiz].type == QuizType.Normal) {
+            clickAnswerButton(selectAnswer: 1)
+        }
+        else if (quizzes[currentQuiz].type == QuizType.Multiple) {
+            pressedButton(button: answer2)
+        }
     }
     @IBAction func answer3Click(_ sender: Any) {
-        clickAnswerButton(selectAnswer: 2)
+        if (quizzes[currentQuiz].type == QuizType.Normal) {
+            clickAnswerButton(selectAnswer: 2)
+        }
+        else if (quizzes[currentQuiz].type == QuizType.Multiple) {
+            pressedButton(button: answer3)
+        }
     }
     @IBAction func answer4Click(_ sender: Any) {
-        clickAnswerButton(selectAnswer: 3)
+        if (quizzes[currentQuiz].type == QuizType.Normal) {
+            clickAnswerButton(selectAnswer: 3)
+        }
+        else if (quizzes[currentQuiz].type == QuizType.Multiple) {
+            pressedButton(button: answer4)
+        }
     }
     @IBAction func continueClick(_ sender: Any) {
         if(quizzes[currentQuiz].type == QuizType.Multiple) {
+            var answers : [Int] = []
+            if(answer1.backgroundColor == UIColor.gray) {answers.append(0)}
+            if(answer2.backgroundColor == UIColor.gray) {answers.append(1)}
+            if(answer3.backgroundColor == UIColor.gray) {answers.append(2)}
+            if(answer4.backgroundColor == UIColor.gray) {answers.append(3)}
+            if (checkAnswer(answers: answers))  {
+                // Correct
+                // Todo: sound
+                score += 1
+                dialogResult(result: true)
+            } else {
+                // Wrong
+                // Todo: sound
+                dialogResult(result: false)
+            }
         } else if (quizzes[currentQuiz].type == QuizType.Open) {
             let textAnswer = answerField.text?.lowercased()
             if (checkAnswer(text: textAnswer))  {
@@ -47,12 +82,14 @@ class QuizViewController: UIViewController {
     }
 
     var score : Int = 0
-    var currentAnswers : [Int] = []
     var currentQuiz : Int = 0
     var quizzes = [Quiz]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setNotPressedButtons()
+
         // Initialize the quiz
         createQuiz()
         // Start Game
@@ -67,6 +104,22 @@ class QuizViewController: UIViewController {
         answer2.isHidden = disp
         answer3.isHidden = disp
         answer4.isHidden = disp
+    }
+
+    func pressedButton(button : UIButton) {
+        if button.backgroundColor == UIColor.gray {
+            button.backgroundColor = UIColor.blue
+        }
+        else if button.backgroundColor == UIColor.blue {
+            button.backgroundColor = UIColor.gray
+        }
+    }
+
+    func setNotPressedButtons() {
+        answer1.backgroundColor = UIColor.blue
+        answer2.backgroundColor = UIColor.blue
+        answer3.backgroundColor = UIColor.blue
+        answer4.backgroundColor = UIColor.blue
     }
 
     /**
@@ -90,10 +143,9 @@ class QuizViewController: UIViewController {
      * Show quiz by type
      */
     func showQuiz(quiz : Quiz) {
+        setNotPressedButtons()
         answerField.text = ""
         questionText.text = quiz.question
-        questionText.isHidden = false
-        currentAnswers.removeAll()
         
         if (quiz.type == QuizType.Normal || quiz.type == QuizType.Multiple) {
             answer1.setTitle(quiz.answers?[0], for: .normal)
@@ -127,7 +179,6 @@ class QuizViewController: UIViewController {
                 dialogResult(result: false)
             }
         }
-        else if (quizzes[currentQuiz].type == QuizType.Multiple) {
     }
 
     /**
@@ -141,6 +192,12 @@ class QuizViewController: UIViewController {
             else {
                 return false
             }
+        }
+        return false
+    }
+    func checkAnswer(answers : [Int]?) -> Bool {
+        if (quizzes[currentQuiz].type == QuizType.Multiple) {
+            return !(answers!.sorted() == quizzes[currentQuiz].correctAnswers!.sorted())
         }
         return false
     }
