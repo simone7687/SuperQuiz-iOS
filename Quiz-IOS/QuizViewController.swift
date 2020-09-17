@@ -107,4 +107,31 @@ class QuizViewController: UIViewController {
 
     func clickAnswerButton(answerIndex : Int?) {
     }
+
+    /**
+     * End of the game
+     */
+    func endGame() {
+        let dialogMessage = UIAlertController(title: "End of the game", message: "Your score is: " + String(self.score), preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            // Todo: Come back
+        })
+        //Add OK button to a dialog message
+        dialogMessage.addAction(ok)
+        // Present Alert to 
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+    /**
+     * Move on to the next quiz if the quizzes are finished finish the game
+     */
+    func nextQuiz() {
+        if (currentQuiz < quizzes.count - 1) {
+            currentQuiz += 1;
+            showQuiz(quiz: quizzes[currentQuiz])
+        }
+        else {
+            self.endGame()
+        }
+    }
 }
