@@ -52,10 +52,10 @@ class QuizViewController: UIViewController {
     @IBAction func continueClick(_ sender: Any) {
         if(quizzes[currentQuiz].type == QuizType.Multiple) {
             var answers : [Int] = []
-            if(answer1.backgroundColor == UIColor.gray) {answers.append(0)}
-            if(answer2.backgroundColor == UIColor.gray) {answers.append(1)}
-            if(answer3.backgroundColor == UIColor.gray) {answers.append(2)}
-            if(answer4.backgroundColor == UIColor.gray) {answers.append(3)}
+            if(answer1.tintColor == UIColor.gray) {answers.append(0)}
+            if(answer2.tintColor == UIColor.gray) {answers.append(1)}
+            if(answer3.tintColor == UIColor.gray) {answers.append(2)}
+            if(answer4.tintColor == UIColor.gray) {answers.append(3)}
             if (checkAnswer(answers: answers))  {
                 // Correct
                 // Todo: sound
@@ -84,11 +84,12 @@ class QuizViewController: UIViewController {
     var score : Int = 0
     var currentQuiz : Int = 0
     var quizzes = [Quiz]()
+    var colorButton = UIColor.blue
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setNotPressedButtons()
+        colorButton = answer1.tintColor
 
         // Initialize the quiz
         createQuiz()
@@ -107,19 +108,19 @@ class QuizViewController: UIViewController {
     }
 
     func pressedButton(button : UIButton) {
-        if button.backgroundColor == UIColor.gray {
-            button.backgroundColor = UIColor.blue
+        if button.tintColor == UIColor.gray {
+            button.tintColor = colorButton
         }
-        else if button.backgroundColor == UIColor.blue {
-            button.backgroundColor = UIColor.gray
+        else if button.tintColor == colorButton {
+            button.tintColor = UIColor.gray
         }
     }
 
     func setNotPressedButtons() {
-        answer1.backgroundColor = UIColor.blue
-        answer2.backgroundColor = UIColor.blue
-        answer3.backgroundColor = UIColor.blue
-        answer4.backgroundColor = UIColor.blue
+        answer1.tintColor = colorButton
+        answer2.tintColor = colorButton
+        answer3.tintColor = colorButton
+        answer4.tintColor = colorButton
     }
 
     /**
