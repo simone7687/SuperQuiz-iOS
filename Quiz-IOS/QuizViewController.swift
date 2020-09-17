@@ -243,7 +243,7 @@ class QuizViewController: UIViewController {
     func endGame() {
         let dialogMessage = UIAlertController(title: "End of the game", message: "Your score is: " + String(self.score), preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
-            // Todo: Come back
+            self.navigationController?.popViewController(animated: true)
         })
         //Add OK button to a dialog message
         dialogMessage.addAction(ok)
