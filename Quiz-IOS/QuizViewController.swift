@@ -6,6 +6,7 @@
 //  Copyright © 2020 Simone Massaro. All rights reserved.
 //
 
+import AVFoundation
 import UIKit
 
 class QuizViewController: UIViewController {
@@ -58,24 +59,24 @@ class QuizViewController: UIViewController {
             if(answer4.tintColor == UIColor.gray) {answers.append(3)}
             if (checkAnswer(answers: answers))  {
                 // Correct
-                // Todo: sound
+                playSound(file: "correct", fileType: "mp3")
                 score += 1
                 dialogResult(result: true)
             } else {
                 // Wrong
-                // Todo: sound
+                playSound(file: "error", fileType: "mp3")
                 dialogResult(result: false)
             }
         } else if (quizzes[currentQuiz].type == QuizType.Open) {
             let textAnswer = answerField.text?.lowercased()
             if (checkAnswer(text: textAnswer))  {
                 // Correct
-                // Todo: sound
+                playSound(file: "correct", fileType: "mp3")
                 score += 1
                 dialogResult(result: true)
             } else {
                 // Wrong
-                // Todo: sound
+                playSound(file: "error", fileType: "mp3")
                 dialogResult(result: false)
             }
         }
@@ -85,6 +86,7 @@ class QuizViewController: UIViewController {
     var currentQuiz : Int = 0
     var quizzes = [Quiz]()
     var colorButton = UIColor.blue
+    var player: AVAudioPlayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -183,12 +185,12 @@ class QuizViewController: UIViewController {
         if(quizzes[currentQuiz].type == QuizType.Normal) {
             if (checkAnswer(selectAnswer : selectAnswer)) {
                 // Correct
-                // Todo: sound
+                playSound(file: "correct", fileType: "mp3")
                 score += 1
                 dialogResult(result: true)
             } else {
                 // Wrong
-                // Todo: sound
+                playSound(file: "error", fileType: "mp3")
                 dialogResult(result: false)
             }
         }
@@ -259,6 +261,31 @@ class QuizViewController: UIViewController {
         }
         else {
             self.endGame()
+        }
+    }
+
+    /**
+     * Plays a sound based on the answer correctness
+     */
+    func playSound(file : String, fileType : String) {
+        guard let url = Bundle.main.url(forResource: file, withExtension: fileType) else { return }
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)            
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+            /* iOS 10 and earlier require the following line:
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+
+            guard let player = player else { return }
+
+            player.play()
+
+        } catch let error {
+            print(error.localizedDescription)
         }
     }
 }
