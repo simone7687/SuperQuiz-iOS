@@ -15,6 +15,8 @@
 		FC5D045E251273C8008EAFE4 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5D045D251273C8008EAFE4 /* QuizViewController.swift */; };
 		FCA9C3542510E856009F37AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC46782425109AAF00335612 /* ViewController.swift */; };
 		FCA9C3562510EF50009F37AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA9C3552510EF50009F37AA /* Main.storyboard */; };
+		FCE29F322513CA0500DE20F4 /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FCE29F312513CA0500DE20F4 /* correct.mp3 */; };
+		FCE29F342513CA1A00DE20F4 /* error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FCE29F332513CA1A00DE20F4 /* error.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		FC46782E25109AB100335612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC5D045D251273C8008EAFE4 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		FCCFC99D25125DE100C50A7C /* Quiz-IOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Quiz-IOS.entitlements"; sourceTree = "<group>"; };
+		FCE29F312513CA0500DE20F4 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
+		FCE29F332513CA1A00DE20F4 /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +65,11 @@
 		FC46781F25109AAF00335612 /* Quiz-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				FCE29F2C2513C8A800DE20F4 /* sound */,
+				FCE29F2B2513C88300DE20F4 /* scene */,
 				FCCFC99D25125DE100C50A7C /* Quiz-IOS.entitlements */,
 				FC46782025109AAF00335612 /* AppDelegate.swift */,
 				FCA9C3552510EF50009F37AA /* Main.storyboard */,
-				FC46782225109AAF00335612 /* SceneDelegate.swift */,
-				FC46782425109AAF00335612 /* ViewController.swift */,
 				FC46782625109AB100335612 /* Assets.xcassets */,
 				FC46782B25109AB100335612 /* LaunchScreen.storyboard */,
 				FC46782E25109AB100335612 /* Info.plist */,
@@ -73,6 +77,24 @@
 				FC5D045D251273C8008EAFE4 /* QuizViewController.swift */,
 			);
 			path = "Quiz-IOS";
+			sourceTree = "<group>";
+		};
+		FCE29F2B2513C88300DE20F4 /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				FC46782225109AAF00335612 /* SceneDelegate.swift */,
+				FC46782425109AAF00335612 /* ViewController.swift */,
+			);
+			path = scene;
+			sourceTree = "<group>";
+		};
+		FCE29F2C2513C8A800DE20F4 /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				FCE29F332513CA1A00DE20F4 /* error.mp3 */,
+				FCE29F312513CA0500DE20F4 /* correct.mp3 */,
+			);
+			path = sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +156,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC46782D25109AB100335612 /* LaunchScreen.storyboard in Resources */,
+				FCE29F342513CA1A00DE20F4 /* error.mp3 in Resources */,
 				FC46782725109AB100335612 /* Assets.xcassets in Resources */,
 				FCA9C3562510EF50009F37AA /* Main.storyboard in Resources */,
+				FCE29F322513CA0500DE20F4 /* correct.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
