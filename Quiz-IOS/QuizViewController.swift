@@ -198,7 +198,7 @@ class QuizViewController: UIViewController {
     }
     func checkAnswer(answers : [Int]?) -> Bool {
         if (quizzes[currentQuiz].type == QuizType.Multiple) {
-            return !(answers!.sorted() == quizzes[currentQuiz].correctAnswers!.sorted())
+            return (answers!.sorted() == quizzes[currentQuiz].correctAnswers!.sorted())
         }
         return false
     }
