@@ -29,6 +29,22 @@ class QuizViewController: UIViewController {
     @IBAction func answer4Click(_ sender: Any) {
         clickAnswerButton(selectAnswer: 3)
     }
+    @IBAction func continueClick(_ sender: Any) {
+        if(quizzes[currentQuiz].type == QuizType.Multiple) {
+        } else if (quizzes[currentQuiz].type == QuizType.Open) {
+            let textAnswer = answerField.text?.lowercased()
+            if (checkAnswer(text: textAnswer))  {
+                // Correct
+                // Todo: sound
+                score += 1
+                dialogResult(result: true)
+            } else {
+                // Wrong
+                // Todo: sound
+                dialogResult(result: false)
+            }
+        }
+    }
 
     var score : Int = 0
     var currentAnswers : [Int] = []
@@ -75,32 +91,25 @@ class QuizViewController: UIViewController {
      */
     func showQuiz(quiz : Quiz) {
         answerField.text = ""
-        currentAnswers.removeAll()
         questionText.text = quiz.question
+        questionText.isHidden = false
+        currentAnswers.removeAll()
         
         if (quiz.type == QuizType.Normal || quiz.type == QuizType.Multiple) {
-            let txt1 = quiz.answers?[0]
-            let txt2 = quiz.answers?[1]
-            let txt3 = quiz.answers?[2]
-            let txt4 = quiz.answers?[3]
-            answer1.setTitle(txt1, for: .normal)
-            answer2.setTitle(txt2, for: .normal)
-            answer3.setTitle(txt3, for: .normal)
-            answer4.setTitle(txt4, for: .normal)
+            answer1.setTitle(quiz.answers?[0], for: .normal)
+            answer2.setTitle(quiz.answers?[1], for: .normal)
+            answer3.setTitle(quiz.answers?[2], for: .normal)
+            answer4.setTitle(quiz.answers?[3], for: .normal)
             
             answerField.isHidden = true
             continueButton.isHidden = true
-
             setHiddenButtons(disp : false)
         }
         else if (quiz.type == QuizType.Open) {
-            setHiddenButtons(disp : true)
             answerField.isHidden = false
-            continueButton.isHidden = false
+            setHiddenButtons(disp : true)
         }
-        questionText.isHidden = false
-        
-        if (quiz.type == QuizType.Multiple) {
+        if (quiz.type == QuizType.Multiple || quiz.type == QuizType.Open) {
             continueButton.isHidden = false
         }
     }
@@ -118,6 +127,8 @@ class QuizViewController: UIViewController {
                 dialogResult(result: false)
             }
         }
+        else if (quizzes[currentQuiz].type == QuizType.Multiple) {
+    }
 
     /**
      * Check the answer
@@ -132,6 +143,9 @@ class QuizViewController: UIViewController {
             }
         }
         return false
+    }
+    func checkAnswer(text : String?) -> Bool {
+        return text!.contains(String(quizzes[currentQuiz].correctAnswerText!.lowercased()))
     }
 
     /**
