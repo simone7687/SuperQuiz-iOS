@@ -75,24 +75,41 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Continue"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="vGU-xg-VMY">
-                                <rect key="frame" x="30" y="264.5" width="354" height="183"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="vGU-xg-VMY">
+                                <rect key="frame" x="30" y="264.5" width="354" height="266"/>
                                 <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqc-eZ-KyR">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OG-cR-qvj">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="36"/>
+                                        <rect key="frame" x="0.0" y="56" width="354" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <connections>
+                                            <action selector="answer1Click:" destination="kyL-8p-MQ4" eventType="touchUpInside" id="KUU-tw-ny5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfv-JO-vnz">
-                                        <rect key="frame" x="0.0" y="49" width="354" height="36"/>
+                                        <rect key="frame" x="0.0" y="114" width="354" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <connections>
+                                            <action selector="answer2Click:" destination="kyL-8p-MQ4" eventType="touchUpInside" id="T0S-6I-Xg0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ko-Px-NpR">
-                                        <rect key="frame" x="0.0" y="98" width="354" height="36"/>
+                                        <rect key="frame" x="0.0" y="172" width="354" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <connections>
+                                            <action selector="answer3Click:" destination="kyL-8p-MQ4" eventType="touchUpInside" id="O4v-wJ-Nhj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg0-A1-MkA">
-                                        <rect key="frame" x="0.0" y="147" width="354" height="36"/>
+                                        <rect key="frame" x="0.0" y="230" width="354" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <connections>
+                                            <action selector="answer4Click:" destination="kyL-8p-MQ4" eventType="touchUpInside" id="DNW-6U-wgV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -117,6 +134,7 @@
                         <outlet property="answer2" destination="Nfv-JO-vnz" id="zdG-c2-Cw8"/>
                         <outlet property="answer3" destination="7ko-Px-NpR" id="S93-Pd-tV2"/>
                         <outlet property="answer4" destination="Wg0-A1-MkA" id="BgL-07-WVE"/>
+                        <outlet property="answerField" destination="yqc-eZ-KyR" id="VgI-4S-pEM"/>
                         <outlet property="continueButton" destination="sGS-Hz-ECB" id="jNP-1R-IXT"/>
                         <outlet property="questionText" destination="9Sy-MS-nI4" id="OnJ-O4-XYb"/>
                     </connections>
