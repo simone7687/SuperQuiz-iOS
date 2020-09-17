@@ -127,6 +127,18 @@ class QuizViewController: UIViewController {
      * Create a set of quizzes
      */
     func createQuiz() {
+
+        let quiz1 = Quiz(type: QuizType.Normal, question: "What is the largest state in the world?", answers: ["United States", "Russia", "Canada", "China"], correctAnswers: [1], correctAnswerText: nil)
+        let quiz2 = Quiz(type: QuizType.Normal, question: "Who is the current American president?", answers: ["George Washington", "George W. Bush", "Barack Obama", "Donald Trump"], correctAnswers: [3], correctAnswerText: nil)
+        let quiz3 = Quiz(type: QuizType.Normal, question: "Which man took the first step on the moon?", answers: ["Neil Armstrong", "Cristoforo Colombo", "Peter Griffin", "Michael Collins"], correctAnswers: [0], correctAnswerText: nil)
+        let quiz4 = Quiz(type: QuizType.Open, question: "How much is 60 + 54?", answers: nil, correctAnswers: nil, correctAnswerText: "114")
+        let quiz5 = Quiz(type: QuizType.Multiple, question: "What are the primary colors?", answers: ["Blue", "Violet", "Green", "Red"], correctAnswers: [0,3], correctAnswerText: nil)
+        let quiz6 = Quiz(type: QuizType.Open, question: "In what year was America discovered?", answers: nil, correctAnswers: nil, correctAnswerText: "1492")
+        let quiz7 = Quiz(type: QuizType.Normal, question: "Who is the founder of Apple?", answers: ["Silvio Berlusconi", "Steve Jobs", "Bill Gates", "Mark Zuckerberg"], correctAnswers: [1], correctAnswerText: nil)
+        let quiz8 = Quiz(type: QuizType.Normal, question: "Who is the founder of Facebook?", answers: ["Silvio Berlusconi", "Steve Jobs", "Bill Gates", "Mark Zuckerberg"], correctAnswers: [3], correctAnswerText: nil)
+        
+        quizzes = [quiz1, quiz2, quiz3, quiz4, quiz5, quiz6, quiz7, quiz8]
+
         // Randomize the questions
         quizzes.shuffle()
     }
