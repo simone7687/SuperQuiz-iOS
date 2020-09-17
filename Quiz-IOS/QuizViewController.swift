@@ -106,6 +106,18 @@ class QuizViewController: UIViewController {
     }
 
     func clickAnswerButton(answer : Int?) {
+        if(quizzes[currentQuiz].type == QuizType.Normal) {
+            if (checkAnswer(answer : answer)) {
+                // Correct
+                // Todo: sound
+                score += 1
+                dialogResult(result: true)
+            } else {
+                // Wrong
+                // Todo: sound
+                dialogResult(result: false)
+            }
+        }
 
     /**
      * Check the answer
@@ -121,6 +133,22 @@ class QuizViewController: UIViewController {
         }
         return false
     }
+
+    /**
+     * Show a message to know if your answer is correct.
+     */
+    func dialogResult(result : Bool)
+    {
+        var description = result ? "Well, your answer is correct." : "Argh! the answer is wrong."
+        
+        let dialogMessage = UIAlertController(title: "Result of the answer", message: description, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            nextQuiz()
+        })
+        //Add OK button to a dialog message
+        dialogMessage.addAction(ok)
+        // Present Alert to 
+        self.present(dialogMessage, animated: true, completion: nil)
     }
 
     /**
