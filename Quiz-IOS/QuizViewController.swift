@@ -139,11 +139,11 @@ class QuizViewController: UIViewController {
      */
     func dialogResult(result : Bool)
     {
-        var description = result ? "Well, your answer is correct." : "Argh! the answer is wrong."
+        let description = result ? "Well, your answer is correct." : "Argh! the answer is wrong."
         
         let dialogMessage = UIAlertController(title: "Result of the answer", message: description, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
-            nextQuiz()
+            self.nextQuiz()
         })
         //Add OK button to a dialog message
         dialogMessage.addAction(ok)
