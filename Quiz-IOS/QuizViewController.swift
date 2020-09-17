@@ -18,16 +18,16 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var continueButton: UIButton!
 
     @IBAction func answer1Click(_ sender: Any) {
-        clickAnswerButton(answer: 0)
+        clickAnswerButton(selectAnswer: 0)
     }
     @IBAction func answer2Click(_ sender: Any) {
-        clickAnswerButton(answer: 1)
+        clickAnswerButton(selectAnswer: 1)
     }
     @IBAction func answer3Click(_ sender: Any) {
-        clickAnswerButton(answer: 2)
+        clickAnswerButton(selectAnswer: 2)
     }
     @IBAction func answer4Click(_ sender: Any) {
-        clickAnswerButton(answer: 3)
+        clickAnswerButton(selectAnswer: 3)
     }
 
     var score : Int = 0
@@ -105,9 +105,9 @@ class QuizViewController: UIViewController {
         }
     }
 
-    func clickAnswerButton(answer : Int?) {
+    func clickAnswerButton(selectAnswer : Int?) {
         if(quizzes[currentQuiz].type == QuizType.Normal) {
-            if (checkAnswer(answer : answer)) {
+            if (checkAnswer(selectAnswer : selectAnswer)) {
                 // Correct
                 // Todo: sound
                 score += 1
@@ -122,9 +122,9 @@ class QuizViewController: UIViewController {
     /**
      * Check the answer
      */
-    func checkAnswer(answer : Int?) -> Bool {
+    func checkAnswer(selectAnswer : Int?) -> Bool {
         if (quizzes[currentQuiz].type == QuizType.Normal) {
-            if ((quizzes[currentQuiz].correctAnswers?.contains(answer!)) != nil) {
+            if (quizzes[currentQuiz].correctAnswers!.contains(selectAnswer!)) {
                 return true
             }
             else {
