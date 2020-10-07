@@ -93,6 +93,12 @@ class QuizViewController: UIViewController {
 
         colorButton = answer1.tintColor
 
+        // Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+        // tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+
         // Initialize the quiz
         createQuiz()
         // Start Game
@@ -287,5 +293,11 @@ class QuizViewController: UIViewController {
         } catch let error {
             print(error.localizedDescription)
         }
+    }
+
+    // Calls this function when the tap is recognized.
+    @objc func dismissKeyboard() {
+        // Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 }
