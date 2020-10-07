@@ -144,8 +144,9 @@ class QuizViewController: UIViewController {
         let quiz6 = Quiz(type: QuizType.Open, question: "In what year was America discovered?", answers: nil, correctAnswers: nil, correctAnswerText: "1492")
         let quiz7 = Quiz(type: QuizType.Normal, question: "Who is the founder of Apple?", answers: ["Silvio Berlusconi", "Steve Jobs", "Bill Gates", "Mark Zuckerberg"], correctAnswers: [1], correctAnswerText: nil)
         let quiz8 = Quiz(type: QuizType.Normal, question: "Who is the founder of Facebook?", answers: ["Silvio Berlusconi", "Steve Jobs", "Bill Gates", "Mark Zuckerberg"], correctAnswers: [3], correctAnswerText: nil)
-        
-        quizzes = [quiz1, quiz2, quiz3, quiz4, quiz5, quiz6, quiz7, quiz8]
+        let quiz9 = Quiz(type: QuizType.Multiple, question: "What are the primitive numbers?", answers: ["17", "11", "4", "9"], correctAnswers: [0,1], correctAnswerText: nil)
+        let quiz10 = Quiz(type: QuizType.Multiple, question: "What numbers are divisible by 3?", answers: ["9", "8", "12", "20"], correctAnswers: [0,2], correctAnswerText: nil)
+        quizzes = [quiz1, quiz2, quiz3, quiz4, quiz5, quiz6, quiz7, quiz8, quiz9, quiz10]
 
         // Randomize the questions
         quizzes.shuffle()
